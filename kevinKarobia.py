@@ -16,11 +16,11 @@ def run(argv=None):
     with beam.Pipeline(options=PipelineOptions()) as p:
         sourceConfig = relational_db.SourceConfiguration(
             drivername="postgres+pg8000",
-            host="35.246.153.86",
-            port="5432",
-            username="sil-interviews",
-            password="sil-family",
-            database="sil-interviews"
+            host="",
+            port="",
+            username="",
+            password="",
+            database=""
         )
 
         databaseData = p | "Reading records from DB" >> relational_db.Read(
